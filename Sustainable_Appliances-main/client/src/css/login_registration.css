@@ -1,0 +1,116 @@
+/*AUTH FORM CONTAINER*/
+#auth-form 
+{
+    width:100%;
+}
+
+/*INPUT FIELD STYLES*/
+#auth-form input
+{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+/*Error state for input fields*/
+#auth-form input.error
+{
+    border-color: red;
+}
+
+/*Error message styling which shows below invalid inputs */
+#auth-form div.error
+{
+    margin:10px;
+    padding:5px;
+    margin-top:0px;
+    padding-top:0px;
+    color:red; 
+}
+
+/*Remove default list styling from error messages */
+#auth-form div.error ul
+{
+    margin-left:0px;
+    padding-left:0px;
+    
+}
+
+/*Ensure inputs use border-box sizing */
+#auth-form input 
+{
+    box-sizing: border-box;
+}
+
+/*When input field is focused */
+#auth-form input:focus
+{
+    border-radius: 0px;
+    border-color:blue;
+}
+
+/*Submit button styling (green button) */
+#auth-form input[type=submit] 
+{
+    padding: 7px 10px;
+    font-size: 0.875rem;
+    line-height: normal;
+    border-radius: 0.2rem;
+    color: #fff; 
+    background-color: #28a745;
+    border-color: #28a745;
+    margin-right: 10px;
+    position: relative;
+    top: 1px;  
+    text-decoration: none;
+    cursor:pointer;
+    width:70px;
+}
+
+/*Submit button hover effect*/
+#auth-form input[type=submit]:hover 
+{
+    background-color: #669509;
+}
+
+/* Disabled submit button*/
+#auth-form input[type=submit]:disabled 
+{
+    background-color: #dbf99f;
+    color: #999;
+}
+
+/*INPUT VALIDATION WRAPPER STYLES */
+/*Wrappers for positioning checkmarks */
+#name-wrap,
+#email-wrap,
+#password-wrap,
+#confirm-password-wrap
+{
+    position:relative;
+}
+
+/*Green checkmark icon*/
+#name-wrap span,
+#email-wrap span,
+#password-wrap span,
+#confirm-password-wrap span
+{
+    position:absolute;
+    top:0px;
+    right:2px;
+    font-size: 20px;
+    color:green; 
+    vertical-align: middle;  
+    display:none;  /* Hidden until input is valid */
+}
+
+/*shows the checkmark when input is valid*/
+.show-tick
+{
+    display:block;
+}
